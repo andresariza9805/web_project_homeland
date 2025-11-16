@@ -1,11 +1,8 @@
 .intro {
-  max-width: 830px;
-  margin-left: 0;
-  margin-right: auto;
+  max-width: 984px;
+  margin: 92px auto;
   display: flex;
   flex-direction: column;
-
-  margin-top: 92px;
 }
 .intro__subtitle {
   font-size: 56px;
@@ -14,6 +11,7 @@
   color: white;
   line-height: 1.07;
   margin: 0;
+  max-width: 830px;
 }
 .intro__paragraph_text {
   max-width: 738px;

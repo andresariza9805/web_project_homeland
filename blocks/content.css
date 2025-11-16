@@ -1,4 +1,3 @@
 .content {
-  max-width: 984px;
-  margin: 0 auto;
+  display: block;
 }
