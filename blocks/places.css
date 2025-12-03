@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 152px repeat(3, 1fr) 48px;
-  grid-gap: 40px;
+  grid-gap: 48px 40px;
 }
 .places__title {
   font-size: 72px;
@@ -32,6 +32,10 @@
   height: 100%;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
 }
+.places__image-item:hover {
+  opacity: 50%;
+}
+
 .places__button {
   background: linear-gradient(to right, #0278fe, #003a7b);
   border-radius: 5px;
@@ -45,6 +49,9 @@
   font-size: 18px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+.places__button:hover {
+  background: linear-gradient(to right, #0278fe40, #003a7b40);
 }
 .places__website {
   padding-top: 85px;
@@ -65,7 +72,7 @@
 }
 .places__website-link {
   margin: 0;
-  line-height: 22px;
+  line-height: calc(22 / 18);
 }
 .places__paragraph {
   color: white;
@@ -80,4 +87,76 @@
 }
 .places__paragraph-textone {
   padding-bottom: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .places {
+    max-width: 720px;
+    gap: 72px;
+  }
+  .places__content {
+    grid-template-rows: 92px 1fr repeat(2, 48px);
+  }
+  .places__title {
+    font-size: 42px;
+    line-height: calc(46 / 42);
+    max-width: 340px;
+  }
+  .places__image {
+    max-width: 340px;
+    max-height: 340px;
+    grid-row: 2/4;
+  }
+  .places__button {
+    grid-row: 3;
+    grid-column: 1/4;
+  }
+  .places__website {
+    max-width: 352px;
+    padding-top: 42px;
+  }
+
+  .places__paragraph {
+    grid-row: 2/5;
+    max-width: 352px;
+  }
+}
+@media screen and (max-width: 544px) {
+  .places {
+    max-width: 320px;
+    gap: 62px;
+  }
+  .places__content {
+    grid-template-rows: auto auto auto auto 48px;
+    grid-gap: 30px 0;
+    grid-template-columns: 100%;
+  }
+  .places__title {
+    font-size: 42px;
+    line-height: calc(35 / 32);
+    max-width: 320px;
+    grid-column: 1;
+  }
+  .places__image {
+    max-width: 320px;
+    max-height: 320px;
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .places__button {
+    grid-row: 5;
+    grid-column: 1/4;
+    grid-column: 1;
+  }
+  .places__website {
+    max-width: 320px;
+    padding-top: 42px;
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .places__paragraph {
+    grid-row: 4;
+    max-width: 320px;
+    grid-column: 1;
+  }
 }
